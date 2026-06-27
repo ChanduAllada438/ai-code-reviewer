@@ -28,3 +28,32 @@ The application relies on a modern decoupled architecture using an Express-based
 First, install dependencies for the backend root server:
 ```bash
 npm install
+Move into the frontend folder and install its interface dependencies:
+
+Bash
+cd frontend
+npm install
+2. Configure Environment Secrets
+
+Create a .env file in the root directory of your project (same level as server.js) to secure your system parameters:
+
+Code snippet :
+
+PORT=5000
+GEMINI_API_KEY=your_google_ai_studio_api_key
+
+(Note: .env is included in .gitignore to prevent private token exposure to remote repositories.)
+
+3. Run the Architecture
+Open two terminal instances to boot up both components of the stack simultaneously:
+
+Terminal 1 (Backend Gateway):
+
+Bash
+node server.js
+Terminal 2 (React Interface):
+
+Bash
+cd frontend
+npm run dev
+Open the local network link (e.g., http://localhost:5173) in your browser to run the application protocol live.
